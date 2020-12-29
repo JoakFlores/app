@@ -1,0 +1,41 @@
+/*
+.item-custom{
+    background-color: darkgreen;
+}
+*/
+.settings-formato{
+    padding-top: 20px;
+}
+
+.fondo-transparente{
+    margin-top: 0px;
+    background: rgba(255,255,255, 0.8);
+    height: 100%;
+   
+}
+
+.page-settings{
+    background: url('../img/BackGroundDefault.png');
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+    /*margin-top: 55px;*/
+    background-position: center top;
+    /*padding-top: 20px;*/
+    /* overscroll-behavior: none; */
+    position: static;
+}
+
+.button-settings{
+    margin-top: 20px;
+}
+
+.input-color{
+    color: black;
+}
+
+
+.navbar-tipo-letra{
+    color:white;
+    opacity: 1 !important;
+    font-family: font-navbar;
+}

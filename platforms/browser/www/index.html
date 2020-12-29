@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Sig. 4 líneas fueron copiadas de la documentación framework 7 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+ <!-- Las sig. 10 líneas son para convertir a PWA -->
+ <meta name="author" content="Apps & More">
+ <meta name="description" content="Aplicación móvil para el seguimiento de un determinado torneo">
+ <meta name="MobileOptimized" content="width">
+ <meta name="HandheldFriendly" content="true">
+
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <!--
+ <link rel="apple-touch-ico" href="./img/cedula.png">
+ <link rel="apple-touch-startup-image" href="./img/cedula.png">
+ <meta name="apple-mobile-web-app-title" content="Mi cédula">
+ <link rel="apple-touch-icon" href="./img/icon_72.png" sizes="72x72">
+ <link rel="apple-touch-icon" href="./img/apple_icon_96.png" sizes="96x96">
+ <link rel="apple-touch-icon" href="./img/icon_128.png" sizes="128x128">
+ <link rel="apple-touch-icon" href="./img/icon_144.png" sizes="144x144">
+ <link rel="apple-touch-icon" href="./img/icon_152.png" sizes="152x152">
+ <link rel="apple-touch-icon" href="./img/apple_icon_192.png" sizes="192x192">
+ <link rel="apple-touch-icon" href="./img/icon_384.png" sizes="384x384">
+ <link rel="apple-touch-icon" href="./img/icon_512.png" sizes="512x512">
+
+ <link rel="shortcut icon" type="image/png" href="./img/cedula.png">
+ -->
+ <link rel="manifest" href="./manifest.json">
+ <!-- Esto tiene que ver con el permitir ejecutar API -->
+ <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *" />
+ 
+ <!-- Sig. dos líneas copiadas de la documentación  Framework7 -->
+ <!-- Path to Framework7 Library Bundle CSS -->
+ <link rel="stylesheet" href="css/framework7.bundle.min.css">
+ <!-- Path para los fonts -->
+
+ <link rel="stylesheet" href="css/framework7-icons.css">
+ <link rel="stylesheet" type="text/css" href="css/index.css" />
+ <link rel="stylesheet" type="text/css" href="css/splash.css" />
+ <link rel="stylesheet" type="text/css" href="css/home.css" />
+ <link rel="stylesheet" type="text/css" href="css/navbar-toolbar.css" />
+ <link rel="stylesheet" type="text/css" href="css/settings.css" />
+
+
+ <title>Mi Score</title>
+</head>
+
+<body>
+  <!-- App root element -->
+  <div id="app">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+      <!-- Initial Page, "data-name" contains page name -->
+      <div data-name="home" class="page">
+        <div class="page-content">
+
+          <div class="div-splash">
+            <img class="img_splash" src="img/Splash.png">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        //app.initialize();
+        WaitSplashScreen();
+    </script>
+</body>
+
+</html>
+
