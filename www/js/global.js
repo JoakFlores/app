@@ -2,7 +2,6 @@ var global_functions = {
     ChecaCuenta:function(){
       /*localStorage.removeItem("cuenta");*/
       if (localStorage.getItem("cuenta") == null){
-        console.log("Está adentro de ChecaCuenta 2");
         /* La app no está configurada */
         // Create notification with close button
         var notificationWithButton = app7.notification.create({
@@ -15,21 +14,18 @@ var global_functions = {
         notificationWithButton.open();
         /*app7.dialog.alert("Falta configurar la cuenta, favor ir al menú y selecciona la opción de 'Configuración'", "AVISO");*/
       }else{
-        console.log("Se fue por el ELSE");
-        gcuenta = localStorage.getItem("cuenta");
-        gcliente = Number(gcuenta.substring(0,2));
-        gsucursal= Number(gcuenta.substring(2,4));
-        glogotipo= localStorage.getItem("logotipo");
+        gcuenta   = localStorage.getItem("cuenta");
+        gcliente  = Number(gcuenta.substring(0,2));
+        gsucursal = Number(gcuenta.substring(2,4));
+        gtorneo   = Number(gcuenta.substring(4,6));
+        gequipo   = Number(gcuenta.substring(6,8));
+        //glogotipo= localStorage.getItem("logotipo");
         var nomSucursal = localStorage.getItem("nomSucursal");
         var nomCliente = localStorage.getItem("nomCliente");
-        //Borra contenido de lista-jugadores
-        $$('#datos-cte-sede').html("");
-        var cadena = '<p id="nomLiga" class="texto-nomliga">'+nomCliente+'</p><p class="texto-sede">Sede:</p><p id="nomSede" class="nombre-sede">'+nomSucursal+'</p><p class="texto-version">V1.7</p>';
-        $$('#datos-cte-sede').append(cadena);
-        //$$('#nomSede').text(nomSucursal);
-        //$$('#nomLiga').text(nomCliente);
+        //setTimeout(home_functions.CargaTorneos(), 20000); 
+        //home_functions.CargaTorneos();
       }
-    },
+    },  
     CheckNetConnection:function(){
       var xhr = new XMLHttpRequest();
       var file = "https://cedula.futcho7.com.mx/img/cedula.png";
@@ -46,5 +42,9 @@ var global_functions = {
        return false;
       }
      },
+    // Se llama a la página home, después de desplegar Splash por una espera de 3 segundos
+    WaitSplashScreen:function(){
+      setTimeout(function(){mainView.router.navigate('/home/',{animate:true}); },3000);
+    },
     
   }

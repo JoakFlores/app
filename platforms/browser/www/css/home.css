@@ -1,6 +1,6 @@
 .img_home{
-    width: 100%;
-    height: 100%;
+    background-size: cover;
+    background-image: url(../img/BackGroundDefault.png);
 }
 
 /* Esto por el momento para customizar un icon no funciona */
@@ -8,9 +8,10 @@
     background-image: url('../img/balon.png');
 }
 
+/*
 .my-color-on{
     color: RGB(0,153,0);
-}
+}*/
 
 .my-color-off{
     color: white;
@@ -21,3 +22,24 @@
     color: blue;
 }
 
+.list{
+    margin-top: 15px;
+}
+
+.block-torneo{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.torneo{
+    width: 100%;
+    overflow: hidden;
+}
+
+    
+.torneo img{
+    width: 100%;
+    height: auto;
+  }

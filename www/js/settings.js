@@ -1,4 +1,11 @@
-var settings ={
+var settings_functions = {
+    ChecaSettings:function(){
+        if (localStorage.getItem("cuenta") !== null){
+          /* La cuenta ya está configurada, se muestran los valores */
+          $$('#num-cuenta').val(localStorage.getItem("cuenta"));
+          /* $$('#minutos-periodo').val(localStorage.getItem("minutos")); */
+        }
+    },
     ConfiguraCuenta:function(){
         var lserror = 0;
         /* Se valida si hay cambio en el número de cuenta, si es verdadero, se llama a la API */
@@ -13,39 +20,38 @@ var settings ={
             /* La cuenta cambió, se debe de invocar a la API */
             if (global_functions.CheckNetConnection()){
                 app7.preloader.show();
-                /* En caso de que la cuenta cambió, se borran todos los registros de la BD */
-                DeleteTables();
-                /* La cuenta, se divide por el valor correspondiente a cliente/sucursal */
+                /* La cuenta, se divide por el valor correspondiente a cliente/sucursal/torneo/equipo */
                 var cliente = Number(cuentastring.substring(0,2));
                 var sucursal= Number(cuentastring.substring(2,4));
-    
+                var torneo  = Number(cuentastring.substring(4,6));
+                var equipo  = Number(cuentastring.substring(6,8));    
                 app7.request({ /* PWA */   
-                    /*url: 'http://futcho7.com.mx/Cedula/WebService/configcuenta.php',*/
-                    url: 'https://cedula.futcho7.com.mx/WebService/configcuenta.php',
-                    data:{id_cliente:cliente,id_sucursal:sucursal},
+                    url: 'http://futcho7.com.mx/MiScore/WebService/configcuenta.php',
+                    /*url: 'https://cedula.futcho7.com.mx/WebService/configcuenta.php',*/
+                    data:{id_cliente:cliente,id_sucursal:sucursal,id_torneo:torneo,id_equipo:equipo},
                     method: 'POST',
                     crossDomain: true,
                     success:function(data){
                         app7.preloader.hide();
                         var objson = JSON.parse(data);
                         if (objson.mensaje == "EXITOSO"){
-                            /* Se asignan a variables los valores correspondientes al nombre del cliente y sucursal */
-                            /* Se almacenan en variables nombre del cliente y de la sucursal */
-                            var nomCliente  = objson.datos[0].cli_nombre;
-                            var nomSucursal = objson.datos[0].suc_nombre;
-                            var cliLogo     = objson.datos[0].cli_logo;
+                            /* Se asignan a variables los valores correspondientes */
+                            var nomCliente  = objson.Datos[0].cli_nombre;
+                            var nomSucursal = objson.Datos[0].suc_nombre;
+                            var nomTorneo   = objson.Datos[0].tor_nombre;
+                            var nomEquipo   = objson.Datos[0].equ_nombre;
+                            /*var cliLogo     = objson.Datos[0].cli_logo;*/
                             /* Se almacenan en localStorage: cuenta,nombre de cliente, nombre de sucursal, minutos y periodos */
                             localStorage.setItem("cuenta",cuentastring);
                             localStorage.setItem("nomCliente",nomCliente);
                             localStorage.setItem("nomSucursal",nomSucursal);
-                            localStorage.setItem("minutos",minutos);
-                            localStorage.setItem("periodos",periodos);
-                            localStorage.setItem("logotipo",cliLogo);
+                            localStorage.setItem("nomTorneo",nomTorneo);
+                            localStorage.setItem("nomEquipo",nomEquipo);
+                            /*localStorage.setItem("logotipo",cliLogo);*/
         
-                
-                            app7.dialog.alert(nomCliente+" sede: "+nomSucursal+", la configuración fue exitosa", "AVISO");
+                            app7.dialog.alert(nomEquipo+", bienvenido al seguimiento de tú torneo "+nomTorneo+" en la liga "+nomCliente+", sucursal "+nomSucursal+"\ la configuración fue exitosa", "AVISO");
                             }else{
-                                app7.dialog.alert("La cuenta no existe, revise si hay un error, caso contrario... favor de reportarlo en la oficina de la cancha", "AVISO");
+                                app7.dialog.alert("La cuenta no existe, revise si hay un error, caso contrario... favor de reportarlo en la oficina de la liga", "AVISO");
                             }
                     },
                     error:function(error){
@@ -57,11 +63,12 @@ var settings ={
             }
         }else{
             if (lserror == 0){
-                /* No cambió la cuenta, solo se actualizan los valores de minutos,periodos en los localStorage, los cuales no contiene error */
+                /* No cambió la cuenta, solo se actualizan los valores de minutos,periodos en los localStorage, los cuales no contiene error 
                 localStorage.setItem("minutos",minutos);
                 localStorage.setItem("periodos",periodos);
-                app7.dialog.alert("Actualización exitosa", "AVISO");
+                */
+                app7.dialog.alert("No se detectó ningún cambio en la cuenta", "AVISO");
             }
         }
-    }
+    },
 }

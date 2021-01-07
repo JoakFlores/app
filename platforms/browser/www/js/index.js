@@ -1,5 +1,12 @@
 var $$ = Dom7;
 
+var gcuenta           = "";
+var gcliente          = 0;
+var gsucursal         = 0;
+var gtorneo           = 0;
+var gequipo           = 0;
+//var glogotipo         = "";
+
 var app7 = new Framework7({
     // App root element
     root: '#app',
@@ -32,19 +39,17 @@ var app7 = new Framework7({
       },
     ],
     // ... other parameters
-  });
+});
 
-  var mainView = app7.views.create('.view-main');
+var mainView = app7.views.create('.view-main');
   
-  $$(document).on('page:init', '.page[data-name="home"]', function (e){
-    global_functions.ChecaCuenta();
-   });
+$$(document).on('page:init', '.page[data-name="home"]', function (e){
+  global_functions.ChecaCuenta();
+});
 
-
-// Se llama a la página home, después de desplegar Splash por una espera de 3 segundos
-function WaitSplashScreen(){
-  setTimeout(function(){mainView.router.navigate('/home/',{animate:true}); },3000);
-}
+$$(document).on('page:init', '.page[data-name="settings"]', function (e){
+  settings_functions.ChecaSettings();
+});
 
 
 var app = {
