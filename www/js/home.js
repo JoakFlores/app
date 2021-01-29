@@ -50,20 +50,16 @@ var home_functions = {
             var id_torneo = torneos[i].id_torneo;
             var nombre_torneo = torneos[i].tor_nombre;
             var torneo_orden = torneos[i].tor_orden_miscore
-            var nombre_imagen = "Torneo_"+cliente.toString()+"_"+sucursal.toString()+"_"+torneo_orden.toString()+".png";
-            var cadena = '<div class="block"><div class="row"><div class="img_torneo" id="id_torneo_'+id_torneo+'"><img src="http://futcho7.com.mx/MiScore/Imagenes/'+nombre_imagen+'"/></div></div></div>';
+            gnomtorneos.push(id_torneo,nombre_torneo);
+            var nombre_imagen = "Torneo_"+cliente.toString()+"_"+sucursal.toString()+"_"+id_torneo.toString()+".png";
+            var cadena = '<div class="block-torneo"><div class="torneo" id="id_torneo_'+id_torneo+'" onclick = "home_functions.ShowInfo('+id_torneo+')"><img src="http://futcho7.com.mx/MiScore/Imagenes/'+nombre_imagen+'"/></div></div>';
             $$('#lista-torneos').append(cadena);  
-/*
-<div class="block">
-        <div class="row">
-          <div class="img_torneo"><img src="http://futcho7.com.mx/MiScore/Imagenes/Torneo_1_1_1.png"/></div>
-         </div>
-      </div>
-*/
-
         }
         //app7.preloader.hide();
         callBack("OK");
+    },
+    ShowInfo: function(idTorneo,callBack){
+        mainView.router.navigate(`/show-info/${idTorneo}/`,{animate:false});
     },
 
 }

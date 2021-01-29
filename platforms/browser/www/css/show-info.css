@@ -1,0 +1,110 @@
+.img_show_info{
+    background-size: cover;
+    background-image: url(../img/BackGroundInfo.png);
+}
+
+.menu-tipo-letra{
+   
+    color:  RGB(0,153,0);
+    font-size: 18px;
+
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+
+    border-style:solid;
+    border-width:5px;  
+    border-bottom-color: RGB(0,153,0);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.tabbar-label{
+    font-family: font-navbar;
+}
+
+.navbar~* .toolbar-top, .navbar~.page:not(.no-navbar) .toolbar-top, .navbar~.toolbar-top{
+    top: 10px;
+}
+
+.tab-fijo{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+.tabla-general{
+    background: RGB(0,0,0,.4);
+}
+
+.vertical-only{
+    display: block;
+}
+
+.landscape-only {
+    display: none;
+  }
+
+@media screen and (orientation: landscape) {
+    .landscape-only {
+        display: block;
+    }
+    .vertical-only{
+        display: none;
+    }
+}
+
+.tab-custom{
+    top: -20px;
+    padding-top: 0px;
+}
+
+
+.col-formato{
+    color:white;
+    font-size: 15px;;
+}
+
+.data-table td, .data-table th{
+    padding-left: 2px;
+}
+
+/* La línea que separa cada renglón*/
+.data-table td {
+    border-top: .3px solid RGB(255,255,255,.3);
+}
+
+.block-torneo-info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-custom {
+    color: white;
+}
+
+.icon-not-visible{
+    display: none;
+}
+
+.list ul {
+    background: RGB(0,0,0,.4);;
+}
+
+.icon-custom-photo {
+    color: RGB(239,160,65);
+    /*color: RGB(0,153,0);*/
+}
+
+.list-item-title {
+    /*color: RGB(0,153,0); */
+    color: rgb(239,160,65);
+}
+
+.list li{
+    border-top: .3px solid RGB(255,255,255,.3);
+}
+

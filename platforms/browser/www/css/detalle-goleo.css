@@ -1,0 +1,97 @@
+.block-detalle-datjugador{
+    background: transparent;
+    width: 100%;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nom_equipo{
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color:  rgb(239,160,65);
+}
+
+.num_playera{
+    top: 23px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(239,160,65);
+}
+
+.nom_jugador{
+    font-size: 22px;
+    text-align: center;
+    color:rgb(239,160,65);
+}
+
+.list-cedula-sel{
+    margin-right: .6%;
+    height: 75px;  
+    padding-top: 7px;
+}
+
+.img-background{
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    /*background-size: contain;*/
+    background-image: url(../img/BackGroundDetGol.png);
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+.fecha-juego{
+    position: absolute;
+    margin: 0;
+    margin-left: 50%;
+    width: 45%;
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.det-goles{
+    position: absolute;
+    width: 20%;
+    height: 70%;
+    line-height: normal;
+    left: 0; /* X */
+    margin-left: 30px;
+    top: 0; /* Y */
+    margin-top: 5px;
+    transform: translate(0, 0); /* Reposicionar X,Y */
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family:  font-navbar;
+    font-weight: bold;
+}
+
+.icon-det-goles{
+    position: absolute;
+    width: 20%;
+    height: 70%;
+    line-height: normal;
+    left: 0; /* X */
+    top: 0; /* Y */
+    margin-top: 15px;
+    margin-left: 55px;
+    transform: translate(0, 0); /* Reposicionar X,Y */
+    text-align: center;
+}
+
+.det-goleo-equipo{
+    display: flex;
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    margin-left: 190px;
+    margin-top: 15px;
+    font-family: 'font-navbar';
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+

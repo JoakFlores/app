@@ -8,8 +8,8 @@
 }
 
 .fondo-transparente{
-    margin-top: 0px;
-    background: rgba(255,255,255, 0.8);
+    margin-top: 35px;
+    background: rgba(255,255,255, 0.4);
     height: 100%;
    
 }
@@ -38,4 +38,8 @@
     color:white;
     opacity: 1 !important;
     font-family: font-navbar;
+}
+
+.margen{
+    top: 30px;
 }

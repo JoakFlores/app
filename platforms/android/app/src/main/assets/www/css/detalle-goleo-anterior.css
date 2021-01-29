@@ -1,0 +1,214 @@
+.block-detalle-nomjugador{
+    background: orange;
+    width: 70%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    font-family: font-navbar;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    /*
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 45%;   
+    text-align: center;
+    margin-right: 5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    */
+}
+
+.block-detalle-datjugador{
+    background: transparent;
+    width: 100%;
+    
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-radius: 5px;*/
+    /*
+    background-size: contain;
+    background-image: url(../img/banner6.png);*/
+    /*
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 5px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    */
+}
+
+.icon-custom-photo2 {
+    color: RGB(0,153,0);
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.nom_equipo{
+    font-weight: bold;
+    /*margin-left: 25px;*/
+    /*position: relative;
+    left: 160px;*/
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.num_playera{
+    font-weight: bold;
+    /*margin-left: 25px;
+    position: relative;
+    left: 190px;*/
+    top: 23px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.nom_jugador{
+    font-weight: bold;
+    
+    /*position: relative;*/
+   
+    font-size: 22px;
+    text-align: center;
+    color:white;
+}
+
+.list-cedula-sel{
+    margin: 0;
+    background: white;
+    text-align: center;
+    margin-right: .6%;
+    height: 95px;
+    padding-top: 7px;
+    /*
+    background-size: contain;
+    background-image: url(../img/pruebadetgol-01.png);
+    background-repeat: no-repeat;
+    */
+}
+
+.block-cedula-sel0{
+    margin: 0;
+    height: 69px;
+    margin-bottom: 5px;
+    margin-left: 22px;
+    background-image: radial-gradient(circle at 50% -20.71%, #e6f58f 0, #e9eb7f 10%, #ecdf6e 20%, #efd25d 30%, #f1c44d 40%, #f2b53c 50%, #f3a52d 60%, #f59522 70%, #f8851d 80%, #fa741e 90%, #fc6324 100%);
+    /*background: yellow;*/
+    text-align: center;
+    margin-right: 5%;
+    width: 45%;
+    transform: skew(-30deg,0deg);
+    /*border-left-color: transparent;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-cedula-sel1{
+    margin: 0;
+    height: 69px;
+    margin-bottom: 5px;
+    margin-left: 172px;
+    /*position: relative;*/
+    bottom: 55px;
+    background-image: radial-gradient(circle at 50% -20.71%, #ff57d2 0, #ff4edb 12.5%, #f046e3 25%, #d63feb 37.5%, #b53cf2 50%, #8c3df9 62.5%, #4f40ff 75%, #0046ff 87.5%, #004bff 100%);
+    /*background: orange;*/
+   /* text-align: center;*/
+    /*margin-right: 5%;*/
+    /*border: 1px solid black;*/
+    /*border-radius: 5px;*/
+    width: 45%;
+    transform: skew(-30deg,0deg);
+}
+
+.row-cedula-sel-text1{
+    transform: skew(30deg,0deg);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: font-navbar;
+    word-break: break-all;
+    /*
+    hyphens: auto;
+    justify-content: center;
+    align-items: center;
+    */
+}
+
+.row-cedula-sel-text2{
+    font-size: 12px;
+    color: red;
+}
+
+.block-cedula-sel2{
+    width: 100%;
+    margin: 0;
+    margin-top: 8px;
+    font-weight: bold;
+    /*background: gray;*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.row-cedula-sel-text3{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+
+.col-icon-balon-gol{
+    /*
+    margin: 0;
+    text-align: right;
+    */
+    margin-left: 15px;
+    padding-top: 13px;
+    transform: skew(30deg,0deg);
+}
+
+.font-fight{
+    position: relative;
+    transform: skew(30deg,0deg);
+    font-family: font-navbar;
+    padding-top: 25px;
+    margin-left: 25px;
+    /* Si el número de goles no es mayor de 9 (2 posiciones), margin-left: 46px; */
+    font-size: 28px;
+    color: white;
+    font-weight: 900;
+}
+
+.font-fight2{
+    position: relative;
+    /*transform: skew(30deg,0deg);*/
+    font-family: font-navbar;
+    padding-top: 7px;
+    /*margin-left: 35px;*/
+    font-size: 28px;
+    color: white;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+}
+
+.goles-anotados{
+    transform: skew(30deg,0deg);
+    font-family: font-navbar;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.page-ced-seleccionar{
+    padding-top: 20px;
+}

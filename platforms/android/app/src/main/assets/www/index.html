@@ -36,19 +36,23 @@
  -->
  <link rel="manifest" href="./manifest.json">
  <!-- Esto tiene que ver con el permitir ejecutar API -->
- <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *" />
- 
+ <!-- La sig. línea se modificó content= font-src y style-src para el uso de los icons de google, los valores originales se pueden comparar con la línea de abajo -->
+ <meta http-equiv="Content-Security-Policy" content="font-src * data:; default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src * 'self' 'unsafe-inline' *" />
+ <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *" />-->
  <!-- Sig. dos líneas copiadas de la documentación  Framework7 -->
  <!-- Path to Framework7 Library Bundle CSS -->
  <link rel="stylesheet" href="css/framework7.bundle.min.css">
  <!-- Path para los fonts -->
 
  <link rel="stylesheet" href="css/framework7-icons.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="css/index.css" />
  <link rel="stylesheet" type="text/css" href="css/splash.css" />
  <link rel="stylesheet" type="text/css" href="css/home.css" />
  <link rel="stylesheet" type="text/css" href="css/navbar-toolbar.css" />
  <link rel="stylesheet" type="text/css" href="css/settings.css" />
+ <link rel="stylesheet" type="text/css" href="css/show-info.css" />
+ <link rel="stylesheet" type="text/css" href="css/detalle-goleo.css" />
 
 
  <title>Mi Score</title>
@@ -79,6 +83,8 @@
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/show-info.js"></script>
+    <script type="text/javascript" src="js/detalle-goleo.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript">
         //app.initialize();

@@ -22,7 +22,7 @@ var global_functions = {
         //glogotipo= localStorage.getItem("logotipo");
         var nomSucursal = localStorage.getItem("nomSucursal");
         var nomCliente = localStorage.getItem("nomCliente");
-        //setTimeout(home_functions.CargaTorneos(), 20000); 
+        setTimeout(home_functions.CargaTorneos(), 20000); 
         //home_functions.CargaTorneos();
       }
     },  
