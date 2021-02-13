@@ -25,13 +25,14 @@
 }
 
 .navbar~* .toolbar-top, .navbar~.page:not(.no-navbar) .toolbar-top, .navbar~.toolbar-top{
-    top: 10px;
+    top: 0px;
 }
 
 .tab-fijo{
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    top: -35px;
 }
 
 .tabla-general{
@@ -108,3 +109,6 @@
     border-top: .3px solid RGB(255,255,255,.3);
 }
 
+.col-titulo-tablka{
+    color: blue;
+}

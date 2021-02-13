@@ -37,8 +37,8 @@ var app7 = new Framework7({
         /*
         options:{
           transition: 'f7-flip', 
-        },
-        */
+        },*/
+        
       },
       {
         path: '/show-info/:idTorneo',
@@ -52,6 +52,8 @@ var app7 = new Framework7({
         url: 'views/detalle-goleo.html',
         name: 'detalle-goleo',
       },
+    
+      
     ],
     // ... other parameters
 });
@@ -67,7 +69,7 @@ $$(document).on('page:init', '.page[data-name="settings"]', function (e){
 });
 
 $$(document).on('page:beforein', '.page[data-name="show-info"]', function (e){
-  
+  /* Antes de abrir, muestra el nombre del torneo */
   const page = e.detail;
   var idTorneo = page.route.params.idTorneo;
   gidtorneo = idTorneo;
@@ -79,6 +81,11 @@ $$(document).on('page:init', '.page[data-name="show-info"]', function (e){
   var idTorneo = page.route.params.idTorneo;
   gidtorneo = idTorneo;
   show_info_functions.ShowImgTorneo();
+  /*
+  $$('.accordion-item').on('accordion:opened', function () {
+    console.log('Accordion item opened');
+  });
+  */
 });
 
 $$(document).on('page:init', '.page[data-name="detalle-goleo"]', function (e){
@@ -94,6 +101,8 @@ $$(document).on('page:init', '.page[data-name="detalle-goleo"]', function (e){
   detalle_goleo_functions.ShowNomJugador(id_jugador,id_equipo,num_playera,nomJugador,nomEquipo);
 });
 
+
+
 /* Listener para el tabbar GENERAL,GOLEO, ETC */
 app7.on('tabShow',function (e,t){
   if(e.id != "tab-1"){
@@ -101,9 +110,40 @@ app7.on('tabShow',function (e,t){
     if(e.id == "tab-2"){
       show_info_functions.ShowTablaGoleo();
     }
+    if(e.id == "tab-3"){
+     resultados_functions.ShowAcordionJornada();
+    }
+    
   }else{
     $$('#ico_rotation').html('<i class="material-icons icon-custom">screen_rotation</i>');
   }
+  
+});
+
+
+app7.on('accordionOpen',function (el) {
+  var numJornada = 0;
+  var cadenaJornada = "";
+  var posi = 0;
+
+   // Obtener título, buscando por clase, desde el elemento recibido
+   let titulo = el.querySelector('.item-title');
+   // Mostrar ID del título
+   //console.log(titulo.id);           // numero_jornada
+   // Mostrar contenido del título
+   cadenaJornada = titulo.textContent;  // Jornada #
+   posi = cadenaJornada.indexOf(" ");
+   numJornada = parseInt(cadenaJornada.substring(posi));
+   $$('#show-resul-jor-'+numJornada).html("");
+   resultados_functions.EjecutaApi(numJornada);
+  /* según lo sig. es para que el scroll al abrir la jornada, suba hasta arriba, pero no jala
+  const openedItem = el;
+  const offset = $$(openedItem).offset().top;
+  const navHeight = 56;
+  const toolbarHeight = 48;
+  const scrollTop = $(el).parents('.page-content').scrollTop();
+  $(el).parents('.page-content').scrollTop((offset - navHeight - toolbarHeight + scrollTop), 300);
+  */
   
 });
 

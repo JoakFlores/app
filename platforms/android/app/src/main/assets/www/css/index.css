@@ -8,10 +8,14 @@
     src: url("../fonts/Roboto-Regular.ttf");  /* Give relative path to your css file.*/
 }
 
+/*
 @font-face {
     font-family: "font-fight";
-    src: url("../fonts/Great Fighter Demo.ttf");  /* Give relative path to your css file.*/
-}
+    src: url("../fonts/Great Fighter Demo.ttf"); 
+} 
+*/
+
+
 
 .dialog-title{
     background-color: RGB(0,153,0);
@@ -134,10 +138,12 @@ h1 {
     --f7-theme-color: RGB(0,153,0);
     /*--f7-navbar-bg-color: orange ;
     --f7-list-bg-color: transparent !important;*/
-    --f7-navbar-bg-color: transparent !important;
+    /*--f7-navbar-bg-color: transparent !important;*/
+    --f7-navbar-bg-color: black;
+
     --f7-menu-bg-color: transparent !important;
 
-    --f7-table-head-text-color: white;
+    --f7-table-head-text-color: orange;
     --f7-table-head-font-size: 14px;
     
     --f7-tabbar-link-inactive-color: white;
@@ -147,7 +153,7 @@ h1 {
     --f7-list-item-title-text-color: rgb(239,160,65); /*RGB(0,255,0); Nombre jugador en tabla de goleo */
     --f7-list-item-footer-text-color: white;
     --f7-list-item-after-text-color: white; /* Total de goles en la tabla de goleo */
-    --f7-list-chevron-icon-color:  rgb(239,160,65); /* Icon en tabla de goleo ">" */
+    --f7-list-chevron-icon-color: greenyellow; /* rgb(239,160,65);  Icon en tabla de goleo ">" */
     
 
   }

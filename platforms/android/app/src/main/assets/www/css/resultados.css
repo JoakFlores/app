@@ -1,0 +1,85 @@
+.list-resultados{
+    margin-top: 0px;
+}
+
+.block-resultados-sel0{
+    margin: 0;
+    padding: 0px;
+    margin-bottom: 5px;
+    /*margin-left: 45%;*/
+    /*background: yellow;*/
+    text-align: center;
+    margin-right: 5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding-bottom: 2px;
+}
+
+
+.block-resultados-sel1{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 5px;
+   /* background: RGB(255,165,0,.5);*/
+    background: RGB(57,247,11,.5);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.row-resultados-sel-text1{
+    font-size: 12px;
+    color: white;
+}
+
+.row-resultados-sel-text3{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    color:black;
+    /* Las sig. 3 lineas son para no desbordar el nombre del equipo */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-marcador-text{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    text-overflow: ellipsis;
+    color:black;
+    font-weight: bold;
+}
+
+.icon-resul-goles{
+    /*position: fixed;*/
+    padding: 0;
+}
+
+.block-tarjetas-local{
+    columns: 4;
+    width: 40%;
+}
+
+.block-tarjetas-visita{
+    columns: 4;
+    width: 40%;
+}
+
+
+
+.col-tarjetas{
+    font-size: 15px;
+    color: white;
+}
+
+.custom-item-content {
+   /* display: inline !important;*/
+
+}

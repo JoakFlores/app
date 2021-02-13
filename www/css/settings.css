@@ -10,13 +10,13 @@
 .fondo-transparente{
     margin-top: 35px;
     background: rgba(255,255,255, 0.4);
-    height: 100%;
+    /*height: 100%;*/
    
 }
 
 .page-settings{
     background: url('../img/BackGroundDefault.png');
-    background-size: 100% 90%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /*margin-top: 55px;*/
     background-position: center top;
@@ -36,10 +36,22 @@
 
 .navbar-tipo-letra{
     color:white;
-    opacity: 1 !important;
+    /*opacity: 1 !important;*/
     font-family: font-navbar;
 }
 
 .margen{
     top: 30px;
+   
+
 }
+
+.item-backgound{
+    background-color: white;
+}
+
+/*
+.list .item-content{
+    background-color: white;
+}
+*/
