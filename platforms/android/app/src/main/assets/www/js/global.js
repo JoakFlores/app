@@ -12,6 +12,7 @@ var global_functions = {
           closeButton: true,
         });
         notificationWithButton.open();
+       
         /*app7.dialog.alert("Falta configurar la cuenta, favor ir al menú y selecciona la opción de 'Configuración'", "AVISO");*/
       }else{
         gcuenta   = localStorage.getItem("cuenta");
@@ -28,7 +29,7 @@ var global_functions = {
     },  
     CheckNetConnection:function(){
       var xhr = new XMLHttpRequest();
-      var file = "https://cedula.futcho7.com.mx/img/cedula.png";
+      var file = "https://miscore.futcho7.com.mx/img/MiScore.png";
       var r = Math.round(Math.random() * 10000);
       xhr.open('HEAD', file + "?subins=" + r, false);
       try {

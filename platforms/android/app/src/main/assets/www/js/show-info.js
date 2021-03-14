@@ -4,7 +4,8 @@ var show_info_functions = {
             app7.preloader.show();
             $$('#show-img-torneo').html("");
             var nombre_img = "Torneo_"+gcliente.toString()+"_"+gsucursal.toString()+"_"+gidtorneo.toString()+".png";
-            var cadena = '<div class="torneo"><img src="http://futcho7.com.mx/MiScore/Imagenes/'+nombre_img+'"/></div>';
+            /*var cadena = '<div class="torneo"><img src="http://futcho7.com.mx/MiScore/Imagenes/'+nombre_img+'"/></div>';*/
+            var cadena = '<div class="torneo"><img src="https://miscore.futcho7.com.mx/img/'+nombre_img+'"/></div>';
             $$('#show-img-torneo').append(cadena);  
             app7.preloader.hide();
         }else{
@@ -34,8 +35,8 @@ var show_info_functions = {
         if (global_functions.CheckNetConnection()){
             app7.preloader.show();
             app7.request({ /* PWA */
-                url: 'http://futcho7.com.mx/MiScore/WebService/gettablaposnvaver.php',
-                /*url: 'https://cedula.futcho7.com.mx/WebService/getrecords.php',*/
+                /*url: 'http://futcho7.com.mx/MiScore/WebService/gettablaposnvaver.php',*/
+                url: 'https://miscore.futcho7.com.mx/WebService/gettablapos.php',
                 data:{id_cliente:gcliente,id_sucursal:gsucursal,id_torneo:gidtorneo},
                 method: 'POST',
                 crossDomain: true,
@@ -118,8 +119,8 @@ var show_info_functions = {
         if (global_functions.CheckNetConnection()){
             app7.preloader.show();
             app7.request({ /* PWA */
-                url: 'http://futcho7.com.mx/MiScore/WebService/gettablagolnvaver.php',
-                /*url: 'https://cedula.futcho7.com.mx/WebService/getrecords.php',*/
+                /*url: 'http://futcho7.com.mx/MiScore/WebService/gettablagolnvaver.php',*/
+                url: 'https://miscore.futcho7.com.mx/WebService/gettablagol.php',
                 data:{id_cliente:gcliente,id_sucursal:gsucursal,id_torneo:gidtorneo,id_jornada:gjornada},
                 method: 'POST',
                 crossDomain: true,
@@ -191,4 +192,13 @@ var show_info_functions = {
         var nomEquipo  = $$('#nombre-equipo-'+String(equipo)+'-'+String(jugador)).text();
         mainView.router.navigate(`/detalle-goleo/${equipo}/${jugador}/${playera}/${nomJugador}/${nomEquipo}/`,{animate:true});
     },
+    /* Por el momento no se usa compartir
+    compartir:function(){
+        if(navigator.share) {
+            console.log("Ya entró para compartir");
+        }else{
+            console.log("No puede compartir");
+        }
+    },
+    */
 }

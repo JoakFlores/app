@@ -29,9 +29,9 @@
           <span class="my-color-off">Inicio</span>
         </a>
         <!--
-        <a href="/settings/" class="link">
-          <i class="icon f7-icons color-white">gear_alt</i>
-          <span class="my-color-off">Configurar</span>
+        <a href="javascript:show_info_functions.compartir();" class="link">
+          <i class="icon material-icons color-white">share</i>
+          <span class="my-color-off">Compartir</span>
         </a>
         -->
       </div>
@@ -39,7 +39,7 @@
    
     <div class="page-content">
 
-      <div class="block-torneo-info" id="show-img-torneo">
+      <div class="block-torneo-info landscape-not" id="show-img-torneo">
          <!--
            Esto se hace en show-info.js ( ShowImgTorneo)
         <div class="torneo">
@@ -74,7 +74,7 @@
           <div class="block">
             <!-- DIV para mostrar algunas columnas en posición vertical -->
             <div class="data-table tabla-general vertical-only" id="show-tabla-general">
-            <!--
+            <!-- Esto se hace en show-info.js ( ShowTablaGnrl )
               <table>
                 <thead>
                   <tr>
@@ -101,7 +101,6 @@
 
             </div>
 
-
           </div>
         </div>
 
@@ -109,7 +108,7 @@
           <div class="block">
 
             <div class="list" id="lista-goleadores">
-               <!--
+               <!-- Esto se hace en show-info.js ( ShowTablaGoleo )
               <ul>
                 <li>
                   <a href="#" class="item-link item-content" onclick = "getDatosJugador(4-10)"> /* En el armado de la variable para presentar a los goleadores (show_info_functions.TablaGol), se está enviando el id_equipo-id_jugador/num_playera a la function getDatosJugador */
@@ -146,7 +145,7 @@
 
           
             <div class="list list-resultados" id="show-resultados-acordion">
-              <!--
+              <!-- Esto se hace en resultados.js ( ShowAcordionJornada )
               <ul>
 
                 <li class="accordion-item">
@@ -239,10 +238,7 @@
           </div>
         </div>
 
-
       </div>
 
-  
-      
     </div>
 </div>

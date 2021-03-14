@@ -8,7 +8,10 @@ var gequipo           = 0;
 var gidtorneo         = 0;
 var gnomtorneos       = [];
 var gjornada          = 0;
+var gtoken            = "";
+var gplatform         = " ";
 //var glogotipo         = "";
+
 
 var app7 = new Framework7({
     // App root element
@@ -59,8 +62,27 @@ var app7 = new Framework7({
 });
 
 var mainView = app7.views.create('.view-main');
+
+
   
 $$(document).on('page:init', '.page[data-name="home"]', function (e){
+  if (isMobile.apple.device) {
+    gplatform = 'iOS';
+  }else if (isMobile.android.device) {
+    gplatform = 'Android';
+  }else{
+    gplatform = 'otro';
+  }
+
+ /*
+      if(app7.device.android){
+        gplatform = 'Android';
+      }if(app7.device.ios){
+        gplatform = 'iOS';
+      }else{
+        gplatform = 'Otro';
+      }
+      */
   global_functions.ChecaCuenta();
 });
 
@@ -81,11 +103,6 @@ $$(document).on('page:init', '.page[data-name="show-info"]', function (e){
   var idTorneo = page.route.params.idTorneo;
   gidtorneo = idTorneo;
   show_info_functions.ShowImgTorneo();
-  /*
-  $$('.accordion-item').on('accordion:opened', function () {
-    console.log('Accordion item opened');
-  });
-  */
 });
 
 $$(document).on('page:init', '.page[data-name="detalle-goleo"]', function (e){
@@ -182,4 +199,3 @@ var app = {
     }
     */
 };
-

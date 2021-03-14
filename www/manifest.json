@@ -1,11 +1,11 @@
 {
     "name": "Mi Score",
     "short_name": "Mi Score",
-    "description": "Aplicación Movil para el seguimiento de un determinado torneo",
-    "background_color": "#2B2B2B",
-    "theme_color": "#F0DB4F",
-    "orientation": "landscape",
+    "description": "Aplicación Móvil para el seguimiento de un determinado torneo",
+    "background_color": "#040404",
+    "theme_color": "#040404",
     "display": "fullscreen",
+    "orientation": "any",
     "start_url": "./?utm_source=web_app_manifest",
     "scope": "./",
     "lang": "es-MX",
@@ -39,6 +39,12 @@
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "maskable"
+      },
+      {
+        "src": "./img/icon_144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
       },
       {
         "src": "./img/icon_128.png",

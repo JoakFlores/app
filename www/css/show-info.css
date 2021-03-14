@@ -20,6 +20,13 @@
     border-right-color: transparent;
 }
 
+.block-torneo-info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .tabbar-label{
     font-family: font-navbar;
 }
@@ -47,11 +54,18 @@
     display: none;
   }
 
+.landscape-not{
+    display: flex;
+}
+
 @media screen and (orientation: landscape) {
     .landscape-only {
         display: block;
     }
     .vertical-only{
+        display: none;
+    }
+    .block-torneo-info{
         display: none;
     }
 }
@@ -74,13 +88,6 @@
 /* La línea que separa cada renglón*/
 .data-table td {
     border-top: .3px solid RGB(255,255,255,.3);
-}
-
-.block-torneo-info{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .icon-custom {

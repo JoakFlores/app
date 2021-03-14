@@ -22,8 +22,8 @@ var detalle_goleo_functions = {
         if (global_functions.CheckNetConnection()){
             app7.preloader.show();
             app7.request({ /* PWA */
-                url: 'http://futcho7.com.mx/MiScore/WebService/getdetgoleo.php',
-                /*url: 'https://cedula.futcho7.com.mx/WebService/getrecords.php',*/
+                /*url: 'http://futcho7.com.mx/MiScore/WebService/getdetgoleo.php',*/
+                url: 'https://miscore.futcho7.com.mx/WebService/getdetgoleo.php',
                 data:{id_cliente:gcliente,id_sucursal:gsucursal,id_torneo:gidtorneo,id_equipo:id_equipo,id_jugador:id_jugador},
                 method: 'POST',
                 crossDomain: true,

@@ -3,7 +3,6 @@ var settings_functions = {
         if (localStorage.getItem("cuenta") !== null){
           /* La cuenta ya está configurada, se muestran los valores */
           $$('#num-cuenta').val(localStorage.getItem("cuenta"));
-          /* $$('#minutos-periodo').val(localStorage.getItem("minutos")); */
         }
     },
     ConfiguraCuenta:function(){
@@ -24,11 +23,11 @@ var settings_functions = {
                 var cliente = Number(cuentastring.substring(0,2));
                 var sucursal= Number(cuentastring.substring(2,4));
                 var torneo  = Number(cuentastring.substring(4,6));
-                var equipo  = Number(cuentastring.substring(6,8));    
+                var equipo  = Number(cuentastring.substring(6,8)); 
                 app7.request({ /* PWA */   
-                    url: 'http://futcho7.com.mx/MiScore/WebService/configcuenta.php',
-                    /*url: 'https://cedula.futcho7.com.mx/WebService/configcuenta.php',*/
-                    data:{id_cliente:cliente,id_sucursal:sucursal,id_torneo:torneo,id_equipo:equipo},
+                    /*url: 'http://futcho7.com.mx/MiScore/WebService/configcuenta.php',*/
+                    url: 'https://miscore.futcho7.com.mx/WebService/configcuenta.php',
+                    data:{id_cliente:cliente,id_sucursal:sucursal,id_torneo:torneo,id_equipo:equipo,id_token:gtoken,plattform:gplatform},
                     method: 'POST',
                     crossDomain: true,
                     success:function(data){
@@ -49,8 +48,9 @@ var settings_functions = {
                             localStorage.setItem("nomEquipo",nomEquipo);
                             /*localStorage.setItem("logotipo",cliLogo);*/
         
-                            app7.dialog.alert(nomEquipo+", bienvenido al seguimiento de tú torneo "+nomTorneo+" en la liga "+nomCliente+", sucursal "+nomSucursal+"\ la configuración fue exitosa", "AVISO");
+                            app7.dialog.alert(nomEquipo+"... Bienvenido al seguimiento de tú torneo "+nomTorneo+" en la liga "+nomCliente+" sucursal "+nomSucursal+"\, la configuración fue exitosa", "AVISO");
                             }else{
+                                console.log(objson.mensaje);
                                 app7.dialog.alert("La cuenta no existe, revise si hay un error, caso contrario... favor de reportarlo en la oficina de la liga", "AVISO");
                             }
                     },

@@ -13,27 +13,28 @@
     <meta name="theme-color" content="#2196f3">
  <!-- Las sig. 10 líneas son para convertir a PWA -->
  <meta name="author" content="Apps & More">
- <meta name="description" content="Aplicación móvil para el seguimiento de un determinado torneo">
+ <meta name="description" content="Aplicación móvil para el seguimiento de torneos de fútbol">
  <meta name="MobileOptimized" content="width">
  <meta name="HandheldFriendly" content="true">
 
- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
  <meta name="apple-mobile-web-app-capable" content="yes">
- <!--
- <link rel="apple-touch-ico" href="./img/cedula.png">
- <link rel="apple-touch-startup-image" href="./img/cedula.png">
- <meta name="apple-mobile-web-app-title" content="Mi cédula">
+ <meta name="apple-mobile-web-app-title" content="Mi score">
+ 
+ <link rel="apple-touch-ico" href="./img/MiScore.png">
+ <link rel="apple-touch-startup-image" href="./img/MiScore.png">
+ <meta name="apple-mobile-web-app-title" content="Mi score">
  <link rel="apple-touch-icon" href="./img/icon_72.png" sizes="72x72">
- <link rel="apple-touch-icon" href="./img/apple_icon_96.png" sizes="96x96">
+ <link rel="apple-touch-icon" href="./img/icon_96.png" sizes="96x96">
  <link rel="apple-touch-icon" href="./img/icon_128.png" sizes="128x128">
  <link rel="apple-touch-icon" href="./img/icon_144.png" sizes="144x144">
  <link rel="apple-touch-icon" href="./img/icon_152.png" sizes="152x152">
- <link rel="apple-touch-icon" href="./img/apple_icon_192.png" sizes="192x192">
+ <link rel="apple-touch-icon" href="./img/icon_192.png" sizes="192x192">
  <link rel="apple-touch-icon" href="./img/icon_384.png" sizes="384x384">
  <link rel="apple-touch-icon" href="./img/icon_512.png" sizes="512x512">
 
- <link rel="shortcut icon" type="image/png" href="./img/cedula.png">
- -->
+ <link rel="shortcut icon" type="image/png" href="./img/MiScore.png">
+
  <link rel="manifest" href="./manifest.json">
  <!-- Esto tiene que ver con el permitir ejecutar API -->
  <!-- La sig. línea se modificó content= font-src y style-src para el uso de los icons de google, los valores originales se pueden comparar con la línea de abajo -->
@@ -79,15 +80,26 @@
 
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
+     <script type="text/javascript" src="cordova.js"></script> 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/show-info.js"></script>
-    <script type="text/javascript" src="js/detalle-goleo.js"></script>
+    <script type="text/javascript" src="js/detalle_goleo.js"></script>
     <script type="text/javascript" src="js/resultados.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.7/firebase-messaging.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js"></script>
+    <script type="text/javascript" src="js/push-notification.js"></script>
     <script src="script.js"></script>
+    <!--
+    <script>
+   
+      
+    </script>
+    -->
+    
     <script type="text/javascript">
         //app.initialize();
         global_functions.WaitSplashScreen();
