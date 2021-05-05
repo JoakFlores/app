@@ -17,7 +17,7 @@ var home_functions = {
                     var objson = JSON.parse(data);
                     if (objson.status == 0){
                         home_functions.MuestraTorneos(objson,function(f){
-                            var cadena2 = '<p class="version">ver 1.0</p>'
+                            var cadena2 = '<p class="version">ver 2.0</p>'
                             $$('#lista-torneos').append(cadena2);
                             app7.preloader.hide();
                             /*app7.dialog.alert("El proceso ha concluido, el dispositivo cuenta con "+String(gjuegosCargados)+" juegos, puedes continuar con la elaboración de la cédula arbitral para cada uno de ellos.", "Carga de Datos");*/

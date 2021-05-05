@@ -3,7 +3,13 @@ var settings_functions = {
         if (localStorage.getItem("cuenta") !== null){
           /* La cuenta ya está configurada, se muestran los valores */
           $$('#num-cuenta').val(localStorage.getItem("cuenta"));
+
         }
+        /*
+        if (Notification.permission === 'granted') {
+            $$('#toggle-1').html('<input type="checkbox" checked /><span class="toggle-icon"></span>');
+          }
+        */
     },
     ConfiguraCuenta:function(){
         var lserror = 0;
@@ -27,7 +33,7 @@ var settings_functions = {
                 app7.request({ /* PWA */   
                     /*url: 'http://futcho7.com.mx/MiScore/WebService/configcuenta.php',*/
                     url: 'https://miscore.futcho7.com.mx/WebService/configcuenta.php',
-                    data:{id_cliente:cliente,id_sucursal:sucursal,id_torneo:torneo,id_equipo:equipo,id_token:gtoken,platform:gplatform},
+                    data:{id_cliente:cliente,id_sucursal:sucursal,id_torneo:torneo,id_equipo:equipo,id_token:gtoken,plattform:gplatform},
                     method: 'POST',
                     crossDomain: true,
                     success:function(data){
@@ -50,6 +56,7 @@ var settings_functions = {
         
                             app7.dialog.alert(nomEquipo+"... Bienvenido al seguimiento de tú torneo "+nomTorneo+" en la liga "+nomCliente+" sucursal "+nomSucursal+"\, la configuración fue exitosa", "AVISO");
                             }else{
+                                console.log(objson.mensaje);
                                 app7.dialog.alert("La cuenta no existe, revise si hay un error, caso contrario... favor de reportarlo en la oficina de la liga", "AVISO");
                             }
                     },
@@ -70,4 +77,57 @@ var settings_functions = {
             }
         }
     },
+    /*
+    unsubscribeFromPushNotification:function() {
+        navigator.serviceWorker.ready
+        .then(function(registration) {
+            registration.pushManager.getSubscription()
+            .then(function (subscription) {
+                console.log(subscription);
+                if(!subscription) {
+                    alert('No se puede cancelar la suscripción a las notificaciones.');
+                    return;
+                }
+                subscription.unsubscribe()
+                .then(function () {
+                    console.log('Canceladas las notificaciones.');
+                    console.log(subscription);
+                    /*this.updatePushNotificationStatus(false);
+                 })
+                .catch(function (error) {
+                    console.error(error);
+                });
+            })
+            .catch(function (error) {
+                console.error('No fue posible cancelar las notificaciones');
+             });
+        })
+    },
+    subscribeToPushNotification:function() {
+        initializeFirebaseMessaging();
+        /*
+        navigator.serviceWorker.ready
+        .then(function(registration) {
+            if (!registration.pushManager) {
+                alert('Tú browser no soporta recibir notificaciones.');
+                return false;
+            }
+            //---to subscribe push notification using pushmanager---
+            registration.pushManager.subscribe(
+            //---always show notification when received---
+            { userVisibleOnly: true }
+            )
+            .then(function (subscription) {
+                console.log('Suscrito al recibo de notificaciones.');
+                console.log(subscription);
+                updatePushNotificationStatus(true);
+            })
+            .catch(function (error) {
+                updatePushNotificationStatus(false);
+                console.error('Error al suscribir notificaciones: ', error);
+            });
+        })
+        
+    }*/
+   
 }

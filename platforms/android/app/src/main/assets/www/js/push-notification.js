@@ -11,7 +11,8 @@ var config = {
 firebase.initializeApp(config);
   
 const messaging = firebase.messaging();
-messaging
+function initializeFirebaseMessaging(){
+  messaging
       .requestPermission()
       .then(function () {
           //MsgElem.innerHTML = "Notification permission granted." 
@@ -20,7 +21,7 @@ messaging
           return messaging.getToken()
       })
       .then(function(token) {
-        console.log(token);
+        console.log("Token: "+token);
         gtoken = token;
           //TokenElem.innerHTML = "token is : " + token
       })
@@ -28,11 +29,16 @@ messaging
           //ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
           console.log("Unable to get permission to notify.", err);
       });
+}
 
 let enableForegroundNotification = true;
 messaging.onMessage(function(payload) {
     console.log("Message received. ", payload);
-    //NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
+    const notificationOption={
+      body:payload.notification.body,
+      icon:payload.notification.icon
+    };
+  
     if(Notification.permission=="granted"){
         var notification = new Notification(payload.notification.title,notificationOption);
         notification.onclick = function (ev){
@@ -60,3 +66,5 @@ messaging.onTokenRefresh(function(){
       console.log(reason);
     })
 })
+
+initializeFirebaseMessaging();

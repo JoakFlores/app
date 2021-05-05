@@ -6,7 +6,7 @@
     "theme_color": "#040404",
     "display": "fullscreen",
     "orientation": "any",
-    "start_url": "./?utm_source=web_app_manifest",
+    "start_url": "/index.html",
     "scope": "./",
     "lang": "es-MX",
     "icons": [

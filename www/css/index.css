@@ -17,6 +17,7 @@
 
 
 
+
 .dialog-title{
     background-color: RGB(0,153,0);
     font-family: font-navbar;;
@@ -154,6 +155,9 @@ h1 {
     --f7-list-item-footer-text-color: white;
     --f7-list-item-after-text-color: white; /* Total de goles en la tabla de goleo */
     --f7-list-chevron-icon-color: greenyellow; /* rgb(239,160,65);  Icon en tabla de goleo ">" */
+
+    --f7-toggle-height: 20px;
+    --f7-toggle-width: 45px;
     
 
   }

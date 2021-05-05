@@ -62,10 +62,16 @@ var app7 = new Framework7({
 });
 
 var mainView = app7.views.create('.view-main');
-
-
   
 $$(document).on('page:init', '.page[data-name="home"]', function (e){
+/*
+  window.screen.orientation
+             .lock("portrait-secondary")
+             .then(
+               (success) => console.log(success)
+             , (failure) => console.log(failure)
+             )
+             */
   if (isMobile.apple.device) {
     gplatform = 'iOS';
   }else if (isMobile.android.device) {
@@ -73,21 +79,33 @@ $$(document).on('page:init', '.page[data-name="home"]', function (e){
   }else{
     gplatform = 'otro';
   }
-
- /*
-      if(app7.device.android){
-        gplatform = 'Android';
-      }if(app7.device.ios){
-        gplatform = 'iOS';
-      }else{
-        gplatform = 'Otro';
-      }
-      */
   global_functions.ChecaCuenta();
 });
 
-$$(document).on('page:init', '.page[data-name="settings"]', function (e){
+
+$$(document).on('page:init', '.page[data-name="settings"]', function (e, page){
   settings_functions.ChecaSettings();
+/*
+  page.$el.find('#toggle-1').on('change', function () { 
+    var toggle = app7.toggle.get('#toggle-1');
+    if (toggle.checked) {
+      app7.dialog.alert("Está prendido");
+      settings_functions.subscribeToPushNotification();
+      // do something
+    }else{
+      app7.dialog.alert("Está apagado");
+      settings_functions.unsubscribeFromPushNotification();
+    }
+ 
+    if ($$('#toggle-1').prop('checked') == true) {
+      app7.dialog.alert("Está prendido");
+      /*settings_functions.subscribeToPushNotification();
+    } else {
+      app7.dialog.alert("Está apagado");
+      /*settings_functions.unsubscribeFromPushNotification();
+    }
+    
+  });*/
 });
 
 $$(document).on('page:beforein', '.page[data-name="show-info"]', function (e){
@@ -161,10 +179,7 @@ app7.on('accordionOpen',function (el) {
   const scrollTop = $(el).parents('.page-content').scrollTop();
   $(el).parents('.page-content').scrollTop((offset - navHeight - toolbarHeight + scrollTop), 300);
   */
-  
 });
-
-
 
 var app = {
   /*

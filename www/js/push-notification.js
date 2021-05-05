@@ -21,7 +21,7 @@ function initializeFirebaseMessaging(){
           return messaging.getToken()
       })
       .then(function(token) {
-        console.log(token);
+        console.log("Token: "+token);
         gtoken = token;
           //TokenElem.innerHTML = "token is : " + token
       })
