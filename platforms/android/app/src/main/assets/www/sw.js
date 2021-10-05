@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'v2.0_cache_miscore',
+const CACHE_NAME = 'v2.1_cache_miscore',
   urlsToCache = [
     './',
     './css/framework7.bundle.min.css',

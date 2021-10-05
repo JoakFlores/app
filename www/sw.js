@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'v2.0_cache_miscore',
+const CACHE_NAME = 'v2.1_cache_miscore',
   urlsToCache = [
     './',
     './css/framework7.bundle.min.css',
@@ -19,6 +19,7 @@ const CACHE_NAME = 'v2.0_cache_miscore',
     './img/Balon.ico',
     './img/tarjeta_amarilla.png',
     './img/tarjeta_roja.png',
+    './img/Tor_1_1_2.png',
     './js/framework7.bundle.min.js',
     './js/detalle_goleo.js',
     './js/global.js',

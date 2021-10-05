@@ -79,6 +79,7 @@ $$(document).on('page:init', '.page[data-name="home"]', function (e){
   }else{
     gplatform = 'otro';
   }
+
   global_functions.ChecaCuenta();
 });
 

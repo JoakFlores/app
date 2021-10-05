@@ -30,6 +30,12 @@ var settings_functions = {
                 var sucursal= Number(cuentastring.substring(2,4));
                 var torneo  = Number(cuentastring.substring(4,6));
                 var equipo  = Number(cuentastring.substring(6,8)); 
+                console.log(cliente);
+                console.log(sucursal);
+                console.log(torneo);
+                console.log(equipo);
+                console.log(gtoken);
+                console.log(gplatform);
                 app7.request({ /* PWA */   
                     /*url: 'http://futcho7.com.mx/MiScore/WebService/configcuenta.php',*/
                     url: 'https://miscore.futcho7.com.mx/WebService/configcuenta.php',
